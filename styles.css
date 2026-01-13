@@ -1,0 +1,1081 @@
+/* =========================================
+   GLOBAL STYLES & NAVIGATION
+   (Applies to ALL pages)
+   ========================================= */
+
+/* 1. Global Reset */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white; /* Default text color */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Global Navigation Bar (Elsa's Design) */
+.nav {
+    width: 100%;
+    left: 0;
+    /* Ensure no old float behavior interferes */
+    overflow: visible; 
+}
+
+/* The Container (ul) */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;         /* This creates the row layout */
+    align-items: center;   /* Centers items vertically */
+    background-color: #333333;
+    width: 100%;
+    height: auto;
+}
+
+/* The List Items */
+ul li {
+    float: none !important; /* Forces override of any legacy floats */
+    display: block;
+}
+
+/* The Links */
+ul li a {
+    display: block;
+    padding: 14px 16px;
+    color: rgb(156, 156, 156);
+    text-decoration: none;
+    text-align: center;
+}
+
+ul li a:hover {
+    background-color: #111111;
+    color: white;
+}
+
+ul li a.active {
+    color: white;
+}
+
+/* Logo / Brand Alignment */
+/* This assumes your HTML has a class="brand" or the logo is the first li */
+.brand {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-right: auto; /* Pushes everything else to the right */
+    color: white;
+}
+
+ul li:first-child {
+    margin-right: auto; /* Pushes subsequent items to the right */
+}
+
+/* Icons */
+.icon-link {
+    font-size: 1.2rem;
+    color: rgb(156, 156, 156);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-link:hover {
+    color: white;
+}
+
+
+/* =========================================
+   PAGE: ADLY SPECIFIC STYLES
+   ========================================= */
+/*adly*/
+
+/* Removed all .nav, ul, and li styles from here to prevent conflicts */
+
+.header {
+    color: white;
+    background-color: rgb(0, 153, 255);
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+}
+
+.container {
+    padding: 40px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    background-color: #aaaaaa;
+}
+
+
+.footer {
+    background-color: #383838;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    z-index: 100; /* Ensures footer stays on top */
+}
+
+.footer p {
+    color: white;
+}
+
+.regions h2 {
+    color: black;
+}
+
+.regions ol li {
+    color: black;
+}
+
+.regions ol li a {
+    color: black;
+}
+
+
+/* =========================================
+   PAGE: ELSA SPECIFIC STYLES
+   ========================================= */
+/*elsa*/
+
+/* Hero Section */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 80vh; 
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.hero-text h1,
+.hero-text p {
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7); 
+    font-size: 50px;
+}
+
+/*Regions section*/
+.recommended-places {
+    text-align: left;
+    padding-left: 5px; 
+}
+
+.recommended-places h2 {
+    font-size: 20px;
+    color: black;
+    margin-left: 48px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.recommended-places p {
+    color: #555555; 
+}
+
+/*destination places*/
+.des-head {
+  font-family: "Dancing Script";
+  color: var(--maintheme);
+}
+.des-eff:hover {
+  animation: pulse 0.6s;
+}
+
+.destination-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 250px;
+}
+.destination-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  border-radius: 10px;
+}
+.destination-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.destination-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.large-card {
+  height: 300px;
+}
+
+.destination-card:hover img {
+    transform: scale(1.1); 
+}
+
+.destination-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0)
+    );
+    pointer-events: none;
+}
+
+.destination-text,
+.destination-tag {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* ========== PROFILE PAGE COMPONENTS ========== */
+/* Account Page Refined Styles */
+.account-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Header & Cover */
+.profile-card-header {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.profile-cover {
+    height: 180px;
+    background: linear-gradient(135deg, #0099ff, #00d2ff);
+}
+
+.profile-main-info {
+    display: flex;
+    padding: 0 30px 30px;
+    margin-top: -50px;
+    align-items: flex-end;
+    gap: 25px;
+    position: relative;
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 140px;
+    height: 140px;
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    background: #eee;
+}
+
+.user-details h1 { color: #222; margin-bottom: 5px; font-size: 24px; }
+.user-details p { color: #666; font-size: 14px; margin-bottom: 15px; }
+
+.stats-bar { display: flex; gap: 20px; }
+.stat-item { text-align: center; color: #444; }
+.stat-item strong { display: block; font-size: 18px; color: #0099ff; }
+.stat-item span { font-size: 12px; color: #888; text-transform: uppercase; }
+
+/* Content Grid */
+.profile-content-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+}
+
+.info-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.info-card h3 { color: #333; font-size: 16px; margin-bottom: 15px; }
+.bio-text { color: #555; font-size: 14px; margin-bottom: 15px; }
+
+.personal-info-list { list-style: none; }
+.personal-info-list li { 
+    color: #666; font-size: 14px; margin-bottom: 10px; 
+    display: flex; align-items: center; gap: 10px;
+}
+
+/* Tabs & Panels */
+.profile-main-area { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+.content-tabs { display: flex; border-bottom: 1px solid #eee; background: #fafafa; }
+
+.tab-btn {
+    padding: 15px 25px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #777;
+    transition: 0.3s;
+}
+
+.tab-btn.active { color: #0099ff; border-bottom: 3px solid #0099ff; }
+
+.tab-panels { padding: 40px; }
+.panel { display: none; text-align: center; }
+.panel.active { display: block; }
+
+.empty-state { color: #aaa; }
+.empty-state i { font-size: 50px; margin-bottom: 15px; color: #ddd; }
+.empty-state p { margin-bottom: 20px; }
+
+.btn-primary {
+    background: #0099ff; color: white; border: none;
+    padding: 10px 25px; border-radius: 25px; cursor: pointer;
+}
+
+/* Buttons */
+.header-actions { margin-left: auto; display: flex; gap: 10px; padding-bottom: 10px; }
+.btn-edit, .btn-settings {
+    padding: 8px 15px; border-radius: 6px; border: 1px solid #ddd;
+    background: #fff; color: #444; cursor: pointer;
+}
+.btn-edit:hover { background: #f0f0f0; }
+
+.action-link {
+    width: 100%; text-align: left; padding: 10px; border: 1px solid #eee;
+    border-radius: 8px; background: #fff; color: #0099ff; margin-bottom: 8px;
+    cursor: pointer; font-weight: 500;
+}
+.action-link:hover { background: #f0f9ff; }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .profile-content-grid { grid-template-columns: 1fr; }
+    .profile-main-info { flex-direction: column; align-items: center; text-align: center; }
+    .header-actions { margin: 0; }
+}
+
+/* ====== TRAVEL ADVICE CARD ====== */
+.travel-advice {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.travel-advice h3 {
+    margin-bottom: 15px;
+    color: #222;
+    font-size: 1.2rem;
+}
+
+.travel-advice ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.travel-advice li {
+    margin-bottom: 12px;
+}
+
+.travel-advice a {
+    text-decoration: none;
+    color: rgb(0, 153, 255);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.travel-advice a:hover {
+    text-decoration: underline;
+}
+
+.travel-advice a i {
+    font-size: 1.2rem;
+    color: rgb(0, 153, 255);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 1024px) {
+    .profile-layout {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .profile-left,
+    .profile-right {
+        flex: 1;
+    }
+
+    .profile-tabs {
+        gap: 10px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .profile-actions {
+        display: flex;
+        gap: 10px;
+    }
+}
+.view-btn{
+    color: rgb(103, 102, 102);
+}
+
+
+/* =========================================
+   PAGE: FATIHAH SPECIFIC STYLES
+   ========================================= */
+/*fatihah*/
+
+body {
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333; 
+    line-height: 1.6;
+}
+
+/* SEARCH & FILTER SECTION */
+.search-section {
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.search-box {
+    display: inline-flex;
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #0099ff;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    padding: 15px 20px;
+    outline: none;
+    color: #333; 
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.search-box input::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+.search-box button {
+    background-color: #0099ff;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #007acc;
+}
+
+/* Filter Buttons Styling */
+.filter-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border: 2px solid #0099ff;
+    background-color: white;
+    color: #0099ff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #0099ff;
+    color: white;
+}
+
+.search-hint {
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* CONTENT GRID & CARDS */
+.content-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 28px;
+}
+
+.explore-grid {
+    display: grid;
+    /* Ini kunci supaya dia mendatar (3 kolom) */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.explore-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    overflow: hidden;
+    color: #333; 
+}
+
+.explore-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    height: 200px;
+    background-color: #eee;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.category-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ffcc00;
+    color: #000;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card-text {
+    padding: 20px;
+}
+
+.card-text h3 { 
+    margin: 0 0 10px 0; 
+    color: #0099ff; 
+}
+
+.card-text p { 
+    color: #555; 
+    font-size: 14px; 
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #0099ff;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* MODAL STYLING */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 800px;
+    background: #000;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+/* Layout Details */
+.details-main-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background: white;
+}
+
+.item-header h1 { font-size: 32px; margin-bottom: 10px; color: #333; }
+
+.item-tabs { border-bottom: 1px solid #ddd; margin-bottom: 20px; }
+.item-tabs a { 
+    text-decoration: none; color: #666; padding: 10px 15px; display: inline-block;
+    font-size: 14px; font-weight: bold;
+}
+.item-tabs a.active { border-bottom: 3px solid #0099ff; color: #000; }
+
+.hero-gallery img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Susunan 2 Kolum */
+.content-layout {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.left-column { flex: 2; }
+.right-sidebar { flex: 1; }
+
+.side-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.status.red { color: #d93025; font-weight: bold; }
+
+.save-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hours-table { width: 100%; font-size: 13px; border-collapse: collapse; }
+.hours-table td { padding: 5px 0; border-bottom: 1px solid #eee; }
+
+/* =========================================
+   PAGE: FATIHAH SPECIFIC STYLES
+   ========================================= */
+
+.header-hero {
+    height: 80vh; 
+    min-height: 500px; 
+    background-image: url('images/travel1.png'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.65); 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white; 
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9); /* Putih sedikit pudar */
+    font-weight: 300;
+}
+
+/* SEARCH & FILTER SECTION */
+.search-section {
+    background: white;/
+}
+
+/* =========================================
+   FOOTER STYLE - CLEAN & ALIGNED
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #d9d9d9;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f4f4f4; 
+}
+
+.content1 {
+  position: relative;
+  margin: 130px auto;
+  text-align: center;
+  padding: 0 20px;
+  flex: 1;
+}
+
+.content1 .text, .content1 .p {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #202020; /* Warna gelap */
+}
+
+footer {
+  width: 100%;
+  background: #111;
+  position: relative; 
+  padding: 20px 0 0 0;
+}
+
+.main-content {
+  display: flex;
+}
+
+.main-content .box {
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+
+.box h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.box .content {
+  margin: 20px 0 0 0;
+  position: relative;
+}
+
+/* Garisan hiasan di atas tajuk footer */
+.box .content:before {
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+
+.box .content:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15%;
+  background: white;
+  top: -10px;
+}
+
+.left .content p {
+  text-align: justify;
+}
+
+.left .content .social {
+  margin: 20px 0 0 0;
+}
+
+.left .content .social a {
+  padding: 0 2px;
+  text-decoration: none;
+}
+
+.left .content .social a span {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.left .content .social a span:hover {
+  background: white;
+}
+
+.center .content .fas {
+  font-size: 1.4375rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.center .content .fas:hover {
+  background: white;
+}
+
+.center .content .text {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.center .content .phone {
+  margin: 15px 0;
+}
+
+.right form .text {
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: white;
+}
+
+.right form .msg {
+  margin-top: 10px;
+}
+
+.right form input, .right form textarea {
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+  color: white;
+}
+
+.right form input:focus,
+.right form textarea:focus {
+  outline-color: #3498db;
+}
+
+.right form input {
+  height: 35px;
+}
+
+.right form .btn {
+  margin-top: 10px;
+}
+
+.right form .btn button {
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: white;
+  color: black;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.right form .btn button:hover {
+  background: #000;
+}
+
+.bottom center {
+  padding: 15px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+
+.bottom center span {
+  color: #656565;
+}
+
+.bottom center a {
+  color: white;
+  text-decoration: none;
+}
+
+.bottom center a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+  .main-content {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box {
+    margin: 5px 0;
+    flex-basis: 100%;
+  }
+}
+
+/* --- FOOTER FORM ALIGNMENT (FORCE FULL WIDTH) --- */
+
+/* 1. Pastikan form dalam keadaan menegak */
+footer .right form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* 2. Pastikan semua kotak input & textarea panjang penuh & selari */
+footer .right form input, 
+footer .right form textarea {
+    width: 100% !important;
+    margin-bottom: 15px;
+    display: block;
+    box-sizing: border-box; /* Sangat penting supaya padding tak buat kotak terkeluar */
+}
+
+/* 3. Style Butang Send - Guna tag 'footer' terus tanpa titik (.) */
+footer .right .btn {
+    width: 100%;
+    margin-top: 5px;
+}
+
+footer .right .btn button {
+    width: 100% !important; /* Paksa lebar 100% */
+    height: 45px !important;
+    display: block !important;
+    background-color: white !important; /* Kekalkan warna putih asal anda */
+    color: black !important;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+footer .right .btn button:hover {
+    background-color: #000 !important;
+    color: white !important;
+}
+
+/* --- MOBILE OPTIMIZATION --- */
+
+@media screen and (max-width: 768px) {
+    /* Hero Section Adjustment */
+    header-hero {
+        height: 60vh; /* Kurangkan ketinggian pada mobile supaya tak terlalu panjang */
+        min-height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Kecilkan saiz h1 supaya tak pecah/overflow */
+        padding: 0 10px;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem; /* Kecilkan sedikit p untuk readability */
+    }
+
+    /* Content Adjustment */
+    .content1 {
+        margin: 60px auto; /* Kurangkan margin 130px yang terlalu besar untuk mobile */
+    }
+
+    .content1 .text, .content1 .p {
+        font-size: 1.8rem; /* Kecilkan tajuk content */
+    }
+
+    /* Footer Adjustment */
+    .main-content .box {
+        padding: 10px 0; /* Kurangkan side padding footer */
+    }
+
+    .center .content .text {
+        font-size: 0.9rem; /* Kecilkan teks info footer */
+    }
+}
+
+/* Extra small devices (Phones) */
+@media screen and (max-width: 480px) {
+    header-hero {
+        height: 50vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+}

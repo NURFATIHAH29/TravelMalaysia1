@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - Explore Malaysia Travel Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <div class="nav">
+        <ul>
+            <li class="brand">Explore Malaysia Travel Blog</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="destination.html">Destinations</a></li>
+            
+            <li><a href="login.html">Login</a></li>
+
+            <li>
+                <a href="account.html" class="icon-link" title="Account">
+                    <i class="fa-solid fa-user" style="color: white;"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <header>
+            <h1>Account</h1>
+            <p>All your informations and wishlist.</p>
+        </header>
+    </div>
+
+    <div class="profile-header">
+        <div class="profile-info">
+            <img src="images/profile.png" class="profile-avatar" alt="Profile">
+
+            <div class="profile-text">
+                <h2>Rory</h2>
+                <p class="contributions">Contributions<br><span>0</span></p>
+            </div>
+        </div>
+
+        <div class="profile-actions">
+            <button class="edit-btn">Edit profile</button>
+            <button class="settings-btn">⚙️</button>
+        </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="profile-tabs">
+        <button class="tab active" data-tab="activity">Activity feed</button>
+        <button class="tab" data-tab="trips">Trips</button>
+        <button class="tab" data-tab="photos">Photos</button>
+        <button class="tab" data-tab="reviews">Reviews</button>
+        <button class="tab" data-tab="wishlist">Wishlist</button>
+    </div>
+
+    <!-- Profile Layout: LEFT + RIGHT -->
+    <div class="profile-layout">
+
+        <!-- LEFT COLUMN -->
+        <div class="profile-left">
+
+            <!-- Share Travel Advice -->
+            <div class="card travel-advice">
+                <h3>Share your travel advice</h3>
+                <ul>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-camera"></i> Post photos</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-solid fa-pen"></i> Write review</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Experience -->
+            <div class="card">
+                <h3>Experience</h3>
+
+
+                <div class="achievement">
+                    <strong>＋Write your first review</strong>
+                </div>
+
+                <div class="achievement">
+                    <strong>＋Upload your first photo</strong>
+
+                </div>
+
+                <button class="view-btn">View all</button>
+            </div>
+
+            <!-- Personal Information -->
+            <div class="card">
+                <h3>Personal Information</h3>
+                <p>＋ Add your current city</p>
+                <p>📅 Joined in Jan 2026</p>
+                <p>＋ Add a website</p>
+            </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="profile-right">
+            <div class="tab-content">
+                <div class="tab-panel active" id="activity">
+                    <div class="card center">
+                        <h3>Activity Feed</h3>
+                        <p class="muted">No activity yet. Start exploring Malaysia!</p>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="trips">
+                    <div class="card center">
+                        <h3>Your Trips</h3>
+                        <p class="muted">You haven’t added any trips.</p>
+                    </div>
+                </div>
+                <div class="tab-panel" id="photos">
+                    <div class="card center">
+                        <h3>Your Photos</h3>
+                        <p class="muted">Upload your travel photos.</p>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="reviews">
+                    <div class="card center">
+                        <h3>Your Reviews</h3>
+                        <p class="muted">Write your first review.</p>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="wishlist">
+                    <div class="card center">
+                        <h3>Wishlist</h3>
+                        <p class="muted">List of your wishlist.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+     <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h2>About us</h2>
+                <div class="content">
+                    <p>Explore Malaysia is a travel blog dedicated to uncovering hidden gems across the nation through
+                        authentic guides and local stories.</p>
+                    <div class="social">
+                        <a href="#"><span class="fab fa-facebook-f"></span></a>
+                        <a href="#"><span class="fab fa-twitter"></span></a>
+                        <a href="#"><span class="fab fa-instagram"></span></a>
+                        <a href="#"><span class="fab fa-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center box">
+                <h2>Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">UMT, Terengganu</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">+60 11-12133856</span>
+                    </div>
+                    <div class="email">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">s76094@ocean.umt.edu.my</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right box">
+                <h2>Contact us</h2>
+                <div class="content">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required>
+                        </div>
+                        <div class="msg">
+                            <div class="text">Message *</div>
+                            <textarea rows="2" cols="25" required></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <center>
+                <span class="credit">Created By <a href="#">Explore Malaysia Team</a> | </span>
+                <span class="far fa-copyright"></span><span> 2025 All rights reserved.</span>
+            </center>
+        </div>
+    </footer>
+
+</body>
+
+</html>
